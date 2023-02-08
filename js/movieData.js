@@ -13,6 +13,7 @@ let movieData = {
       year: 2001,
       cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
       runtime: 170,
+      image: "./images/The Royal Tenebaums.jpg"
     },
     "Fantastic Mr. Fox": {
       year: 2009,
@@ -23,6 +24,7 @@ let movieData = {
         "Bill Murray",
         "Jason Schwartzman",
       ],
+      image: "./images/Fantastic Mr.Fox.jpg",
       runtime: 147,
       rating: 7.9,
     },
@@ -32,5 +34,7 @@ let movieData = {
       year: 2014,
       plot: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+      image: "./images/The Grand Budapest hotel.jpg"
     },
+    
   };

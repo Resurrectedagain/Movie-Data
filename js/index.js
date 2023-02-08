@@ -20,7 +20,7 @@ for (let key in movieData) {
   let movieCard = document.createElement("div")
   movieCard.classList.add('movie-card')
   movieCard.innerHTML = `
-  <img src="${movieData[key]['image']}" alt="The Darjeeling Limited">
+  <img src="${movieData[key]['image']}" alt="${movieData[key]}" height="500px">
   <h2 class="movie-title">${key}</h2>
 
     <p class="plot">${movieData[key]['plot']}</p>
@@ -31,8 +31,4 @@ for (let key in movieData) {
     </div>`;
   movieContainer.appendChild(movieCard);
 }
-var img = document.createElement ('https://www.google.com/search?q=the+darjeeling+limited&sxsrf=AJOqlzVuBWWzQgIG3yOfL-he7yxV5pKr1Q:1675845963598&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjn1u7axIX9AhVxnVwKHVqbAwwQ_AUoAXoECAEQAw&biw=750&bih=866&dpr=2#imgrc=cjmg_wMhZ4q3bM')
-img.src = "image.png"
-var src = document.getElementByid ("https://www.google.com/search?q=the+darjeeling+limited&sxsrf=AJOqlzVuBWWzQgIG3yOfL-he7yxV5pKr1Q:1675845963598&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjn1u7axIX9AhVxnVwKHVqbAwwQ_AUoAXoECAEQAw&biw=750&bih=866&dpr=2#imgrc=cjmg_wMhZ4q3bM")
-src.appendChild(img);
 
