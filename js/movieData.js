@@ -15,13 +15,7 @@ let movieData = {
       runtime: 170,
       image: "./images/The Royal Tenebaums.jpg"
     },
-    "Fantastic Mr. Fox": {
-      year: 2009,
-      plot: "An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.",
-      cast: [
-        "George Clooney",
-        "Meryl Streep",
-        "Bill Murray",
+    "Fantastgi        "Bill Murray",
         "Jason Schwartzman",
       ],
       image: "./images/Fantastic Mr.Fox.jpg",

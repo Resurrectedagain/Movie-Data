@@ -1,7 +1,8 @@
-
+const toggleMode = document.querySelector('#toggle-mode');
+const movieContainer = document.querySelector(".movie-container");
+const sortByRating = document.querySelector("#sort-by-rating");
 
 let mode = "light"
-const toggleMode = document.querySelector('#toggle-mode');
 toggleMode.addEventListener('click', function () {
   let content = document.querySelector('.body');
   if (mode == 'light') {
@@ -15,8 +16,8 @@ toggleMode.addEventListener('click', function () {
   }
 })
 
-let movieContainer = document.querySelector(".movie-container");
-for (let key in movieData) {
+function displayMovies(movieData){
+  for (let key in movieData) {
   let movieCard = document.createElement("div")
   movieCard.classList.add('movie-card')
   movieCard.innerHTML = `
@@ -31,4 +32,22 @@ for (let key in movieData) {
     </div>`;
   movieContainer.appendChild(movieCard);
 }
+}
+displayMovies(movieData)
 
+sortByRating.addEventListener('click', function(){
+  console.log(movieData)
+  movieData = Object.entries(movieData)
+  movieData.sort(function(a, b){
+    return a.rating - b.rating
+  })
+  console.log(movieData);
+  sorted_movieData = {}
+  for(let i=0; i<movieData.length; i++){
+    sorted_movieData[movieData[i][0]] = movieData[i][1];
+  }
+  movieData = sorted_movieData
+  console.log(movieData)
+  console.log(sorted_movieData)
+  displayMovies(movieData)
+})

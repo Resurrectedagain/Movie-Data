@@ -21,7 +21,11 @@ nav{
     justify-content: center;
     
 }
-
+.sort{
+    display: flex;
+    justify-content: end;
+    
+}
 .movie-container{
     width: 70%;
     display: flex;
