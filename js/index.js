@@ -17,9 +17,11 @@ toggleMode.addEventListener('click', function () {
 })
 
 function displayMovies(movieData){
+
   for (let key in movieData) {
   let movieCard = document.createElement("div")
   movieCard.classList.add('movie-card')
+  
   movieCard.innerHTML = `
   <img src="${movieData[key]['image']}" alt="${movieData[key]}" height="500px">
   <h2 class="movie-title">${key}</h2>
@@ -36,18 +38,15 @@ function displayMovies(movieData){
 displayMovies(movieData)
 
 sortByRating.addEventListener('click', function(){
-  console.log(movieData)
-  movieData = Object.entries(movieData)
-  movieData.sort(function(a, b){
-    return a.rating - b.rating
-  })
-  console.log(movieData);
-  sorted_movieData = {}
-  for(let i=0; i<movieData.length; i++){
-    sorted_movieData[movieData[i][0]] = movieData[i][1];
-  }
-  movieData = sorted_movieData
-  console.log(movieData)
-  console.log(sorted_movieData)
-  displayMovies(movieData)
+  let movieArray = Object.entries(movieData).map(([title, value]) => {
+    value.title = title;
+    return value;
+  });
+  
+  movieArray.sort((a, b) => a.rating - b.rating);
+  console.log(movieArray);
+  let child = document.querySelector(movieCard)
+  movieContainer.removeChild(child)
+  displayMovies(movieArray)
+
 })
