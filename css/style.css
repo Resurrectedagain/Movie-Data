@@ -5,7 +5,9 @@ body{
 
     background-image: -moz-repeating-linear-gradient(white yellow grey )
 }
-.logo{text-align:center;
+.logo{
+    padding: 20px;
+    text-align:center;
     background-color:whitesmoke; 
 }
 nav h1{
@@ -42,10 +44,10 @@ nav h1{
 }
 
 .light-mode{
-    background-color: lightseagreen;
-    color: black;
+    background-color:whitesmoke;
+    color:black;
 }
 .dark-mode{
-    background-color: darkgray;
+    background-color: black;
 
 }
